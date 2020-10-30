@@ -1,0 +1,420 @@
+/*import fonts form google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato&family=Roboto&family=Sofia&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+:root{
+  --light-gray: #2b3032a1;
+  --primary-color: #45ccb8;
+  --border: #2b303218;
+  --text-color: #ff686b;
+  --roboto: "Roboto", sans-serif;
+  --gugi: "Gugi", cursive;
+  --sofia: "Sofia", cursive;
+}
+
+.primary-color{
+  color: white;
+}
+.bg-primary-color{
+  background-color: var(--primary-color) !important;
+}
+.font-roboto{
+  font-family: var(--roboto);
+}
+.lightblue{
+  color: lightblue;
+}
+
+body{
+  padding-top: 100px;
+}
+/*header*/
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  font-family: var(--roboto);
+}
+header,.site-title{
+  font-family: var(--gugi);
+}
+.container, .dropdown-toggle, .container, .dropdown-item{
+  text-decoration: none;
+  font-size: 0.7em;
+}
+.header-links a{
+  background-color: white;
+  border-style: solid white;
+  border-radius: 10%;
+  padding: 1em 1em 1em 1em;
+  font-size: 1em;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+.dropdown-item:hover{
+  background-color: var(--primary-color);
+}
+.header-links a:hover{
+  background-color: #00A693;
+  color: white;
+}
+.px-2, .px-1, .mx-2{
+  display: none;
+}
+/* Navigation Menu **/
+
+.navbar{
+  position: static;
+}
+.navbar-nav{
+  padding: 0em 0em;
+}
+.navbar-nav, .nav-link{
+  font-size: 0.9em;
+  color: #ff686b !important;
+}
+.navbar-nav, .nav-item, .nav-link{
+  padding: 0.1em;
+}
+.navbar-nav, .basket-icon{
+  margin-right: 1.5rem;
+}
+.nav-item:hover {
+  border-radius: 1px;
+  background-color: var(--primary-color);
+}
+a:active {
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+
+.btn {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+}
+
+/**Side Navigation Menu**/
+
+#access_nav{
+  position: fixed;
+}
+#main_nav {
+    display: none;
+}
+
+.with_nav #main_nav {
+    display: block;
+}
+
+#main_nav:target {
+    display: block;
+}
+
+#main_nav {
+    border: 1em;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+nav{
+  border-style: solid grey;
+}
+
+.access_aid {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 0;
+    padding-top: 40px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.access_aid {
+    /* In addition to the existing declarations... */
+    background: white 10px 10px / 20px 20px no-repeat;
+}
+
+#access_nav {
+    background-image: -webkit-repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+    background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+}
+
+#access_top {
+    background-image: linear-gradient(45deg, transparent 13px, #ccc 13px, #ccc 15px, transparent 0), linear-gradient(-45deg, white 13px, #ccc 13px, #ccc 15px, white 0);
+}
+
+
+/** Side menu**/
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background-color: var(--primary-color);
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.wrapper .sidebar ul li a{
+  color: #white;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #594f8d;
+}
+
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #00A693;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.wrapper .sidebar .social_media a:hover{
+  background: black;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}
+
+#social1:hover{
+  color: #3b5998;
+}
+#social2:hover{
+  color: #6CADDE;
+}
+#social3:hover{
+  color: purple;
+}
+
+li {
+  list-style: none;
+}
+
+#sidebar-title{
+  font-family: var(--gugi);
+}
+
+.sidebar a{
+  color: white;
+}
+
+  /**Radio**/
+  #zeno {
+    text-align:center;
+    width:100%;
+    padding-bottom: 1rem;
+  }
+
+  /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+  #map {
+    position: static;
+    display: block;
+    width: 100%;
+    height: 700px;
+  }
+
+  /*features page*/
+
+  span a{
+    color: white;
+  }
+ .lister-item-content a{
+   color: white;
+ }
+ .list-name, .list-overview-summary, .ghost, .privacy-overview, .list-description, .lister{
+  text-align: center;
+  color: white;
+}
+ .lister-list{
+   border-style: solid;
+   margin: auto;
+   width: 75%;
+   padding: 100px;
+ }
+ .list-name, .list-overview, .list-description{
+   padding: 50px;
+ }
+ /* collection Slide */
+
+ * {box-sizing:border-box}
+
+ /* Slideshow container */
+ .slideshow-container {
+   padding-top: 20px;
+   max-width: 1000px;
+   position: relative;
+   margin: auto;
+ }
+
+ /* Hide the images by default */
+ .mySlides {
+   display: none;
+ }
+
+ /* Next & previous buttons */
+ .prev, .next {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color: black;
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+ }
+
+ /* Position the "next button" to the right */
+ .next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+ }
+
+ /* On hover, add a black background color with a little bit see-through */
+ .prev:hover, .next:hover {
+   background-color: var(--primary-color);
+ }
+
+ /* Caption text */
+ .text {
+   display: none;
+   color: #ff686b;
+   font-size: 15px;
+   padding: 8px 12px;
+   position: absolute;
+   bottom: 8px;
+   width: 100%;
+   text-align: center;
+ }
+
+ /* Number text (1/3 etc) */
+ .numbertext {
+   display: none;
+   color: #ff686b;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+ }
+
+ /* The dots/bullets/indicators */
+ .dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+ }
+
+ .active, .dot:hover {
+   background-color: var(--primary-color);
+ }
+
+ /* Fading animation */
+ .fade {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 10s;
+   animation-name: fade;
+   animation-duration: 20s;
+ }
+
+ @-webkit-keyframes fade {
+   from {opacity: 1}
+   to {opacity: 1}
+ }
+
+ @keyframes fade {
+   from {opacity: 1}
+   to {opacity: 1}
+ }
+
+/**Collection Slide*/
+
+/**Twitter Timeline**/
+#timeline{
+  padding-left: 22%;
+  padding-right: 21%;
+}
+#mention{
+  padding-left: 44.5%;
+}
